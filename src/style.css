@@ -1,0 +1,107 @@
+html {
+  overflow: hidden;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  cursor: default;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: white;
+  font-family: 'Droid Sans Fallback, Droid san-sreif, hiragino sans gb';
+  position: relative;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top left;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: top 1s ease;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.page-1 {
+  background-image: url('./images/bg1.png');
+}
+.page-2 {
+  background-image: url('./images/bg2.png');
+}
+
+.page-3 {
+  background-image: url('./images/bg3.png');
+}
+
+.page-4 {
+  background-image: url('./images/bg4.png');
+}
+
+.page-5 {
+  background-image: url('./images/bg5.png');
+}
+
+.up {
+  top: -100%;
+}
+.down {
+  top: 100%;
+}
+.curr {
+  top: 0;
+}
+.indicator {
+  position: fixed;
+  right: 1rem;
+  top: 10%;
+  width: 10px;
+  z-index: 9;
+}
+.indicator ul {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.indicator ul li {
+  list-style: none;
+  position: relative;
+  height: 20px;
+  width: 100%;
+}
+.indicator ul li:before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  top: 7px;
+  right: 2px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.5);
+  transition: all 0.2s ease 0.3s;
+}
+.indicator ul li:hover:before {
+  width: 20px;
+}
+.indicator ul li.active:before {
+  width: 28px;
+}
+.indicator ul li:hover {
+  cursor: pointer;
+}
